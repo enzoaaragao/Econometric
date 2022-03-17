@@ -1,0 +1,139 @@
+----------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\enzoa\OneDrive\Ambiente de Trabalho\Group2\code2\DescStat.txt
+  log type:  text
+ opened on:  17 Dec 2021, 17:38:33
+
+. 
+. use ctax_gdp_AERPP.dta, clear
+
+. 
+. egen IDDS=group(ID)
+
+. 
+. xtset IDDS year
+
+Panel variable: IDDS (strongly balanced)
+ Time variable: year, 1985 to 2018
+         Delta: 1 unit
+
+. xtsum share19 dlrgdp dlemptot ctaxever rater_LCU~18 ctaxyear EU EU2
+
+Variable         |      Mean   Std. dev.       Min        Max |    Observations
+-----------------+--------------------------------------------+----------------
+share19  overall |  .1409375     .18054          0        .62 |     N =    1088
+         between |             .1833445          0        .62 |     n =      32
+         within  |                    0   .1409375   .1409375 |     T =      34
+                 |                                            |
+dlrgdp   overall |  2.551174   3.324277   -16.0141   11.48911 |     N =     997
+         between |             .9956793   .9763942   4.394801 |     n =      32
+         within  |             3.180292  -17.53769   11.10913 | T-bar = 31.1563
+                 |                                            |
+dlemptot overall |  .7526374   2.251267  -15.48429   8.076119 |     N =     708
+         between |             .9208417  -1.281701   3.177353 |     n =      30
+         within  |             2.092507  -14.58931   6.989242 | T-bar =    23.6
+                 |                                            |
+ctaxever overall |        .5   .5002299          0          1 |     N =    1088
+         between |             .5080005          0          1 |     n =      32
+         within  |                    0         .5         .5 |     T =      34
+                 |                                            |
+rater~18 overall |  7.877878    21.5323          0   135.5384 |     N =    1016
+         between |             16.96206          0   82.54518 |     n =      32
+         within  |             13.00574   -74.6673   74.70211 | T-bar =   31.75
+                 |                                            |
+ctaxyear overall |  2002.875    9.49474       1990       2015 |     N =     544
+         between |             9.797108       1990       2015 |     n =      16
+         within  |                    0   2002.875   2002.875 |     T =      34
+                 |                                            |
+EU       overall |    .96875   .1740727          0          1 |     N =    1088
+         between |             .1767767          0          1 |     n =      32
+         within  |                    0     .96875     .96875 |     T =      34
+                 |                                            |
+EU2      overall |         1          0          1          1 |     N =    1088
+         between |                    0          1          1 |     n =      32
+         within  |                    0          1          1 |     T =      34
+
+. panelstat IDDS year
+
+You may want to install user-written GTOOLS for faster results
+
+*****************************************************
+Analyzing ctax_gdp_AERPP.dta
+*****************************************************
+
+*****************************************************
+Basic descriptives
+*****************************************************
+There are 1088 time x individuals observations
+There are 32 unique individuals
+Time values range from 1985 to 2018
+Maximum time range is 34
+The average number of periods per individual is 34.00
+The level of completeness is 100.00% (100% is a fully balanced panel)
+Average number of gaps per individual is 0.00
+Average gap size is    .
+Largest gap is .
+*****************************************************
+
+*****************************************************
+Distribution of number of observations per individual
+*****************************************************
+
+ Observ per |
+ individual |      Freq.     Percent        Cum.
+------------+-----------------------------------
+         34 |         32      100.00      100.00
+------------+-----------------------------------
+      Total |         32      100.00
+
+*****************************************************
+Number of individuals per time unit
+*****************************************************
+
+       Time |      Freq.     Percent        Cum.
+------------+-----------------------------------
+       1985 |         32        2.94        2.94
+       1986 |         32        2.94        5.88
+       1987 |         32        2.94        8.82
+       1988 |         32        2.94       11.76
+       1989 |         32        2.94       14.71
+       1990 |         32        2.94       17.65
+       1991 |         32        2.94       20.59
+       1992 |         32        2.94       23.53
+       1993 |         32        2.94       26.47
+       1994 |         32        2.94       29.41
+       1995 |         32        2.94       32.35
+       1996 |         32        2.94       35.29
+       1997 |         32        2.94       38.24
+       1998 |         32        2.94       41.18
+       1999 |         32        2.94       44.12
+       2000 |         32        2.94       47.06
+       2001 |         32        2.94       50.00
+       2002 |         32        2.94       52.94
+       2003 |         32        2.94       55.88
+       2004 |         32        2.94       58.82
+       2005 |         32        2.94       61.76
+       2006 |         32        2.94       64.71
+       2007 |         32        2.94       67.65
+       2008 |         32        2.94       70.59
+       2009 |         32        2.94       73.53
+       2010 |         32        2.94       76.47
+       2011 |         32        2.94       79.41
+       2012 |         32        2.94       82.35
+       2013 |         32        2.94       85.29
+       2014 |         32        2.94       88.24
+       2015 |         32        2.94       91.18
+       2016 |         32        2.94       94.12
+       2017 |         32        2.94       97.06
+       2018 |         32        2.94      100.00
+------------+-----------------------------------
+      Total |      1,088      100.00
+
+
+. 
+. log close
+      name:  <unnamed>
+       log:  C:\Users\enzoa\OneDrive\Ambiente de Trabalho\Group2\code2\DescStat.txt
+  log type:  text
+ closed on:  17 Dec 2021, 17:38:33
+----------------------------------------------------------------------------------------------------------------------
