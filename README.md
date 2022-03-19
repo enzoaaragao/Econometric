@@ -5,7 +5,7 @@ This repo contains the project's code of the [Econometrics](https://sigarra.up.p
 
 ## Overview
 
-The "Final_Project_Statement" file contains the instructions of the course project. You should read it before exploring the "Group2" folder
+The "Final_Project_Statement" file contains the instructions of the course project. You should read it before exploring the "Group2" folder.
 
 ---
 
