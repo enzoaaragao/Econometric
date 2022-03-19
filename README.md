@@ -1,4 +1,4 @@
-# Econometric
+# Econometrics
 This repo contains the project's code of the [Econometrics](https://sigarra.up.pt/fep/en/UCURR_GERAL.FICHA_UC_VIEW?pv_ocorrencia_id=477784) (ECONM) course of the first semester of the Master's in Economic at the School of Economics of the University of Porto. The final grade of this project was 17/20.
 
 ---
